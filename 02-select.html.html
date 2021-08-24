@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header><h1>Titel</h1></header>
+    <main>
+      <h2>Undertitel</h2>
+      <section>
+        <article>
+          <img src="https://placeimg.com/640/480/nature" alt="Natur" />
+          <h3>Articl 1</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam varius
+            faucibus mattis. Quisque suscipit libero metus, nec bibendum magna
+            porta ac. Fusce et tincidunt leo. Pellentesque placerat tortor
+            purus, eu dictum ante consectetur vitae. Class aptent taciti
+            sociosqu ad litora torquent per conubia nostra, per inceptos
+            himenaeos. Aliquam pretium euismod nunc, eget vehicula metus
+            venenatis ac. Duis ultricies pharetra luctus. Praesent quis augue
+            lacinia, dapibus ante vel, vehicula justo. Praesent blandit metus ac
+            consequat hendrerit. Phasellus euismod, sapien sit amet efficitur
+            iaculis, velit velit fringilla purus, at sagittis est ligula ut ex.
+          </p>
+        </article>
+        <article>
+          <img src="https://placeimg.com/640/480/arch" alt="Arch" />
+          <h3>Articl 1</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam varius
+            faucibus mattis. Quisque suscipit libero metus, nec bibendum magna
+            porta ac. Fusce et tincidunt leo. Pellentesque placerat tortor
+            purus, eu dictum ante consectetur vitae. Class aptent taciti
+            sociosqu ad litora torquent per conubia nostra, per inceptos
+            himenaeos. Aliquam pretium euismod nunc, eget vehicula metus
+            venenatis ac. Duis ultricies pharetra luctus. Praesent quis augue
+            lacinia, dapibus ante vel, vehicula justo. Praesent blandit metus ac
+            consequat hendrerit. Phasellus euismod, sapien sit amet efficitur
+            iaculis, velit velit fringilla purus, at sagittis est ligula ut ex.
+          </p>
+        </article>
+      </section>
+    </main>
+    <footer>Foooter</footer>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      main {
+        width: 80vw;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        grid-gap: 20px;
+
+        /* display: flex;
+        gap: 1.5rem; */
+      }
+
+      article {
+        border: 1px solid #333;
+        padding: 0.5rem;
+      }
+
+      header,
+      footer {
+        text-align: center;
+        padding: 10px 0;
+        border: 1px solid #888;
+        margin-top: 0.5rem;
+      }
+    </style>
+    <script>
+      const title = document.querySelector("header h1");
+      const article1 = document.querySelector("article:nth-child(1)");
+      const img1 = document.querySelector("article:nth-child(1) img");
+      const article1Heading = document.querySelector("article:nth-child(1) h3");
+      const article1Content = document.querySelector("article:nth-child(1) p");
+      console.log(article1, article1Heading, img1, article1Content);
+
+      // const title = document.querySelector("header h1");
+      // const pic = document.querySelector("img");
+
+      // title.textContent;
+      // console.log(title, title.textContent, pic);
+    </script>
+  </body>
+</html>
