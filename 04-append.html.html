@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header><h1>Titel</h1></header>
+    <main>
+      <h2>Undertitel</h2>
+      <section>
+        <article>
+          <img src="https://placeimg.com/640/480/nature" alt="Natur" />
+          <h3>Articl 1</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam varius
+            faucibus mattis. Quisque suscipit libero metus, nec bibendum magna
+            porta ac. Fusce et tincidunt leo. Pellentesque placerat tortor
+            purus, eu dictum ante consectetur vitae. Class aptent taciti
+            sociosqu ad litora torquent per conubia nostra, per inceptos
+            himenaeos. Aliquam pretium euismod nunc, eget vehicula metus
+            venenatis ac. Duis ultricies pharetra luctus. Praesent quis augue
+            lacinia, dapibus ante vel, vehicula justo. Praesent blandit metus ac
+            consequat hendrerit. Phasellus euismod, sapien sit amet efficitur
+            iaculis, velit velit fringilla purus, at sagittis est ligula ut ex.
+          </p>
+        </article>
+        <article>
+          <img src="https://placeimg.com/640/480/arch" alt="Arch" />
+          <h3>Articl 1</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam varius
+            faucibus mattis. Quisque suscipit libero metus, nec bibendum magna
+            porta ac. Fusce et tincidunt leo. Pellentesque placerat tortor
+            purus, eu dictum ante consectetur vitae. Class aptent taciti
+            sociosqu ad litora torquent per conubia nostra, per inceptos
+            himenaeos. Aliquam pretium euismod nunc, eget vehicula metus
+            venenatis ac. Duis ultricies pharetra luctus. Praesent quis augue
+            lacinia, dapibus ante vel, vehicula justo. Praesent blandit metus ac
+            consequat hendrerit. Phasellus euismod, sapien sit amet efficitur
+            iaculis, velit velit fringilla purus, at sagittis est ligula ut ex.
+          </p>
+        </article>
+      </section>
+    </main>
+    <footer>Foooter</footer>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      main {
+        width: 80vw;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        grid-gap: 20px;
+
+        /* display: flex;
+        gap: 1.5rem; */
+      }
+
+      article {
+        border: 1px solid #333;
+        padding: 0.5rem;
+      }
+
+      header,
+      footer {
+        text-align: center;
+        padding: 10px 0;
+        border: 1px solid #888;
+        margin-top: 0.5rem;
+      }
+    </style>
+    <script>
+      const title = document.querySelector("header h1");
+
+      // Arictle 1
+      const article1 = document.querySelector("article:nth-child(1)");
+      const img1 = document.querySelector("article:nth-child(1) img");
+      const article1Heading = document.querySelector("article:nth-child(1) h3");
+      const article1Content = document.querySelector("article:nth-child(1) p");
+
+      // Arictle 2
+      const article2Heading = document.querySelector("article:nth-child(2) h3");
+      const article2Content = document.querySelector("article:nth-child(2) p");
+      const img2 = document.querySelector("article:nth-child(2) img");
+
+      // console.log(article1, article1Heading, img1, article1Content);
+
+      title.innerHTML = "<h1>Ny title</h1>";
+
+      article1Heading.innerHTML = "<h3>Nummer 1</h3>";
+      article2Heading.innerHTML = "<h3>Nummer 2</h3>";
+
+      article1Content.textContent = "<p>Okay!</p>";
+      article2Content.innerHTML = "<p><b>Mmmmmm okay?</b></p>";
+
+      img1.src = "https://placeimg.com/640/480/people";
+      img2.src = "https://placeimg.com/640/480/tech";
+
+      img1.alt = "Sejt pic?";
+      img2.alt = "Okay, nu det vildt!";
+
+      // article 3
+      let article3 = document.createElement("article");
+      let img3 = document.createElement("img");
+      let article3Heading = document.createElement("h3");
+      let article3Content = document.createElement("p");
+      // console.log(article3, img3, article3Heading, article3Content);
+
+      img3.src = "https://placeimg.com/640/480/tech/grayscale";
+      img3.alt = "Yeaaaaaa, så ja.";
+
+      article3Heading.textContent = "Nummer 3, uhhh";
+      article3Content.textContent = "Der var en gang, en sang, og den var lang";
+
+      article3.appendChild(img3);
+      article3.appendChild(article3Heading);
+      article3.appendChild(article3Content);
+
+      const section = document.querySelector("section");
+      section.appendChild(article3);
+
+      // let h1 = document.createElement("h1");
+      // let overskrift = document.createTextNode("Min overskrift til info"); h1.appendChild(overskrift);
+      // let img = document.createElement("img"); img.src="http://mabe-kea.dk/E19/pics/pig.png" info.appendChild(h1);
+      // info.appendChild(img);
+    </script>
+  </body>
+</html>
