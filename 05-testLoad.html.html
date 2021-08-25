@@ -102,39 +102,44 @@
 
       // console.log(article1, article1Heading, img1, article1Content);
 
-      title.innerHTML = "<h1>Ny title</h1>";
+      document.addEventListener("DOMContentLoaded", start);
 
-      article1Heading.innerHTML = "<h3>Nummer 1</h3>";
-      article2Heading.innerHTML = "<h3>Nummer 2</h3>";
+      function start() {
+        title.innerHTML = "<h1>Ny title</h1>";
 
-      article1Content.textContent = "<p>Okay!</p>";
-      article2Content.innerHTML = "<p><b>Mmmmmm okay?</b></p>";
+        article1Heading.innerHTML = "<h3>Nummer 1</h3>";
+        article2Heading.innerHTML = "<h3>Nummer 2</h3>";
 
-      img1.src = "https://placeimg.com/640/480/people";
-      img2.src = "https://placeimg.com/640/480/tech";
+        article1Content.textContent = "<p>Okay!</p>";
+        article2Content.innerHTML = "<p><b>Mmmmmm okay?</b></p>";
 
-      img1.alt = "Sejt pic?";
-      img2.alt = "Okay, nu det vildt!";
+        img1.src = "https://placeimg.com/640/480/people";
+        img2.src = "https://placeimg.com/640/480/tech";
 
-      // article 3
-      let article3 = document.createElement("article");
-      let img3 = document.createElement("img");
-      let article3Heading = document.createElement("h3");
-      let article3Content = document.createElement("p");
-      // console.log(article3, img3, article3Heading, article3Content);
+        img1.alt = "Sejt pic?";
+        img2.alt = "Okay, nu det vildt!";
 
-      img3.src = "https://placeimg.com/640/480/tech/grayscale";
-      img3.alt = "Yeaaaaaa, så ja.";
+        // article 3
+        let article3 = document.createElement("article");
+        let img3 = document.createElement("img");
+        let article3Heading = document.createElement("h3");
+        let article3Content = document.createElement("p");
+        // console.log(article3, img3, article3Heading, article3Content);
 
-      article3Heading.textContent = "Nummer 3, uhhh";
-      article3Content.textContent = "Der var en gang, en sang, og den var lang";
+        img3.src = "https://placeimg.com/640/480/tech/grayscale";
+        img3.alt = "Yeaaaaaa, så ja.";
 
-      article3.appendChild(img3);
-      article3.appendChild(article3Heading);
-      article3.appendChild(article3Content);
+        article3Heading.textContent = "Nummer 3, uhhh";
+        article3Content.textContent =
+          "Der var en gang, en sang, og den var lang";
 
-      const section = document.querySelector("section");
-      section.appendChild(article3);
+        article3.appendChild(img3);
+        article3.appendChild(article3Heading);
+        article3.appendChild(article3Content);
+
+        const section = document.querySelector("section");
+        section.appendChild(article3);
+      }
     </script>
   </body>
 </html>
