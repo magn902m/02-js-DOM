@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <style>
+      .boks {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        margin: 1rem;
+      }
+
+      .aktiv {
+        background-color: orange;
+      }
+    </style>
+    <div class="boks aktiv"></div>
+    <div class="boks"></div>
+    <div class="boks"></div>
+    <div class="boks"></div>
+    <div class="boks aktiv"></div>
+    <div class="boks"></div>
+    <div class="boks"></div>
+    <div class="boks"></div>
+    <!-- <div class="boks aktiv"></div>
+    <div class="boks"></div>
+    <div class="boks"></div>
+    <div class="boks"></div> -->
+    <script>
+      const bokse = document.querySelectorAll(".boks");
+      bokse.forEach((boks) => {
+        console.log(boks);
+        boks.addEventListener("click", skiftAktiv);
+      });
+
+      function skiftAktiv() {
+        console.log(this);
+        this.classList.toggle("aktiv");
+      }
+    </script>
+  </body>
+</html>
