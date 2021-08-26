@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Medlemmer</h1>
+    <ol></ol>
+    <script>
+      let medlemmer = ["Alan", "Martin", "Klaus", "Louisa"];
+      const liste = document.querySelector("ol");
+
+      medlemmer.forEach(visDem);
+
+      function visDem(e) {
+        console.log(e);
+        let liElm = document.createElement("li");
+        liElm.textContent = e;
+        liste.appendChild(liElm);
+      }
+
+      // console.log(medlemmer);
+      // console.log(medlemmer[2]);
+    </script>
+  </body>
+</html>
